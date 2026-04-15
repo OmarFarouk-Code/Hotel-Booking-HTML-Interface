@@ -71,33 +71,20 @@
         <fieldset>
           <legend>Payment Information</legend>
 
-          <input
-            type="radio"
-            id="paymethod"
-            name="paymethod"
-            checked
-            required
-          />
-          <label for="paymethod">Credit Card</label>
+          <input type="radio" id="credit" name="paymethod" checked required />
+          <label for="debit">Credit Card</label>
 
-          <input
-            type="radio"
-            id="paymethod"
-            name="paymethod"
-            checked
-            required
-          />
-          <label for="paymethod">Debit Card</label>
+          <input type="radio" id="dedit" name="paymethod" required />
+          <label for="debit">Debit Card</label>
 
           <br /><br />
           <label for="cardno">Card Number:</label>
           <input
             id="cardno"
             name="cardno"
-            type="number"
+            type="text"
             required
-            minlength="13"
-            maxlength="19"
+            pattern="[0-9]{13,19}"
           />
 
           <label for="cvv">CVV:</label>
@@ -106,17 +93,16 @@
             name="cvv"
             type="password"
             required
-            maxlengt="3"
+            maxlength="3"
             minlength="3"
           />
         </fieldset>
         <fieldset>
           <legend>Special Requests</legend>
-          <textarea for="specialrequests"></textarea>
+          <textarea id="specialrequests"></textarea>
         </fieldset>
-        <a href="success.html">
-          <button type="submit">Complete Payment</button>
-        </a>
+
+        <button type="submit">Complete Payment</button>
         <button type="reset">Cancel Payment</button>
       </form>
       <br />
