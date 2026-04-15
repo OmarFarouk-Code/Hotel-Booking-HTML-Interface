@@ -15,106 +15,114 @@
     <meta name="author" content="Mövenpick" />
   </head>
   <body>
-    <header>
+    <header align="center">
       <h1>Mövenpick Hotel Booking System</h1>
       <nav>
-        <a href="index.html">Home</a> | <a href="#">Rooms</a> |
-        <a href="#">Contact Us</a>
+        <a href="index.html">Home</a> | <a href="Rooms.html">Rooms</a> |
+        <a href="contactus.html">Contact Us</a>
       </nav>
     </header>
     <br />
-    <form action="success.html" method="GET">
-      <fieldset>
-        <legend>Room Confirmation</legend>
+    <article align="center">
+      <form action="success.html" method="GET">
+        <fieldset>
+          <legend>Room Confirmation</legend>
 
-        <label for="room-selection">Selected Room:</label>
-        <select id="room-selection" name="room-selection" required>
-          <option value="" disabled selected>
-            Please confirm your room...
-          </option>
-          <option value="seaview-queen">
-            Sea View Queen Bed Room - 3000 EGP/night
-          </option>
-          <option value="seaview-suite">
-            Sea View Honeymoon Suite - 5000 EGP/night
-          </option>
-          <option value="seaview-double">
-            Sea View Double Bed - 3000 EGP/night
-          </option>
-        </select>
-      </fieldset>
+          <label for="room-selection">Selected Room:</label>
+          <select id="room-selection" name="room-selection" required>
+            <option value="" disabled selected>
+              Please confirm your room...
+            </option>
+            <option value="seaview-queen">
+              Sea View Queen Bed Room - 3000 EGP/night
+            </option>
+            <option value="seaview-suite">
+              Sea View Honeymoon Suite - 5000 EGP/night
+            </option>
+            <option value="seaview-double">
+              Sea View Double Bed - 3000 EGP/night
+            </option>
+          </select>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Guest Information</legend>
+
+          <label for="firstname">First Name:</label>
+          <input id="firstname" name="firstName" type="text" required />
+
+          <label for="firstname">Last Name:</label>
+          <input id="lastname" name="lastName" type="email" required />
+
+          <br />
+          <br />
+          <label for="email">Email:</label>
+          <input
+            id="email"
+            name="email"
+            type="text"
+            required
+            placeholder="example@gmail.com"
+          />
+
+          <label for="tel">Telephone No:</label>
+          <input id="tel" name="tel" type="number" required />
+        </fieldset>
+        <fieldset>
+          <legend>Payment Information</legend>
+
+          <input
+            type="radio"
+            id="paymethod"
+            name="paymethod"
+            checked
+            required
+          />
+          <label for="paymethod">Credit Card</label>
+
+          <input
+            type="radio"
+            id="paymethod"
+            name="paymethod"
+            checked
+            required
+          />
+          <label for="paymethod">Debit Card</label>
+
+          <br /><br />
+          <label for="cardno">Card Number:</label>
+          <input
+            id="cardno"
+            name="cardno"
+            type="number"
+            required
+            minlength="13"
+            maxlength="19"
+          />
+
+          <label for="cvv">CVV:</label>
+          <input
+            id="cvv"
+            name="cvv"
+            type="password"
+            required
+            maxlengt="3"
+            minlength="3"
+          />
+        </fieldset>
+        <fieldset>
+          <legend>Special Requests</legend>
+          <textarea for="specialrequests"></textarea>
+        </fieldset>
+        <a href="success.html">
+          <button type="submit">Complete Payment</button>
+        </a>
+        <button type="reset">Cancel Payment</button>
+      </form>
       <br />
-      <fieldset>
-        <legend>Guest Information</legend>
-
-        <label for="firstname">First Name:</label>
-        <input id="firstname" name="firstName" type="text" required />
-
-        <label for="firstname">Last Name:</label>
-        <input id="lastname" name="lastName" type="email" required />
-
-        <br />
-        <br />
-        <label for="email">Email:</label>
-        <input
-          id="email"
-          name="email"
-          type="text"
-          required
-          placeholder="example@gmail.com"
-        />
-
-        <label for="tel">Telephone No:</label>
-        <input id="tel" name="tel" type="number" required />
-      </fieldset>
-      <fieldset>
-        <legend>Payment Information</legend>
-
-        <input type="radio" id="paymethod" name="paymethod" checked required />
-        <label for="paymethod">Credit Card</label>
-
-        <input type="radio" id="paymethod" name="paymethod" checked required />
-        <label for="paymethod">Debit Card</label>
-
-        <br /><br />
-        <label for="cardno">Card Number:</label>
-        <input
-          id="cardno"
-          name="cardno"
-          type="number"
-          required
-          minlength="13"
-          maxlength="19"
-        />
-
-        <label for="cvv">CVV:</label>
-        <input
-          id="cvv"
-          name="cvv"
-          type="password"
-          required
-          maxlengt="3"
-          minlength="3"
-        />
-      </fieldset>
-      <fieldset>
-        <legend>Special Requests</legend>
-        <textarea for="specialrequests"></textarea>
-      </fieldset>
-      <a href="success.html">
-        <button type="submit">Complete Payment</button>
-      </a>
-      <button type="reset">Cancel Payment</button>
-    </form>
-    <br />
-    <a href="results.html">Go Back</a>
+      <a href="results.html">Go Back</a>
+    </article>
     <footer>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <br />
       <br />
       <img src="Images/Mövenpick_Logo.svg.png" width="100" />
